@@ -1,93 +1,376 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hadi Alidoustaghdam</title>
+
     <style>
-        body {
-            font-family: Arial;
-            max-width: 900px;
-            margin: auto;
-            padding: 40px;
-            background: #f4f4f4;
-            color: #222;
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        h1 {
-            color: #003366;
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#0f172a;
+            color:#e2e8f0;
+            line-height:1.7;
         }
 
-        .section {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:auto;
         }
 
-        a {
-            color: #0066cc;
+        header{
+            padding:100px 0 70px 0;
+            text-align:center;
+            border-bottom:1px solid rgba(255,255,255,0.08);
         }
+
+        header h1{
+            font-size:58px;
+            color:#60a5fa;
+            margin-bottom:15px;
+            letter-spacing:1px;
+        }
+
+        header p{
+            font-size:20px;
+            color:#cbd5e1;
+            max-width:900px;
+            margin:auto;
+        }
+
+        nav{
+            position:sticky;
+            top:0;
+            z-index:100;
+            backdrop-filter: blur(10px);
+            background:rgba(15,23,42,0.85);
+            border-bottom:1px solid rgba(255,255,255,0.05);
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+            padding:18px;
+            gap:35px;
+        }
+
+        nav a{
+            color:#e2e8f0;
+            text-decoration:none;
+            font-size:15px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        .section{
+            margin-top:40px;
+            background:#1e293b;
+            padding:35px;
+            border-radius:18px;
+            box-shadow:0 0 25px rgba(0,0,0,0.25);
+        }
+
+        h2{
+            color:#93c5fd;
+            margin-bottom:20px;
+            font-size:32px;
+        }
+
+        p{
+            color:#cbd5e1;
+            font-size:17px;
+        }
+
+        ul{
+            padding-left:22px;
+        }
+
+        li{
+            margin-bottom:14px;
+            color:#e2e8f0;
+        }
+
+        a{
+            color:#38bdf8;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        a:hover{
+            color:#7dd3fc;
+        }
+
+        .button{
+            display:inline-block;
+            margin-top:15px;
+            padding:12px 24px;
+            background:#2563eb;
+            border-radius:10px;
+            color:white;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .button:hover{
+            background:#3b82f6;
+            transform:translateY(-2px);
+        }
+
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:12px;
+            margin-top:15px;
+        }
+
+        .skill{
+            background:#0f172a;
+            padding:10px 16px;
+            border-radius:30px;
+            border:1px solid rgba(255,255,255,0.08);
+            color:#cbd5e1;
+            font-size:14px;
+        }
+
+        .project{
+            margin-bottom:30px;
+            padding-bottom:25px;
+            border-bottom:1px solid rgba(255,255,255,0.08);
+        }
+
+        .project:last-child{
+            border-bottom:none;
+        }
+
+        footer{
+            text-align:center;
+            padding:50px 0;
+            color:#94a3b8;
+            font-size:14px;
+        }
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:40px;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                gap:15px;
+            }
+
+            .section{
+                padding:25px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-    <h1>Hadi Alidoustaghdam</h1>
-
-    <p>
-        RF & Wireless Systems Engineer | JCAS | Ultrasonics | Radar Systems
-    </p>
-
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
-            PhD in Electrical Engineering from the University of Twente.
-            Working on Joint Communication and Sensing, phased arrays,
-            ultrasonic imaging, and radar systems.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>CV</h2>
-        <p>
-            <a href="cv.pdf">Download CV</a>
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>Research Interests</h2>
+    <nav>
         <ul>
-            <li>Joint Communication and Sensing (JCAS)</li>
-            <li>Phased Arrays</li>
-            <li>Ultrasonic Imaging</li>
-            <li>Beamforming</li>
-            <li>Radar Signal Processing</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav>
+
+    <header>
+
+        <div class="container">
+
+            <h1>Hadi Alidoustaghdam</h1>
+
+            <p>
+                RF & Wireless Systems Engineer | Joint Communication and Sensing (JCAS) |
+                Ultrasonics | Radar Systems | Phased Arrays | Signal Processing
+            </p>
+
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <section class="section" id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am an RF and Wireless Systems Engineer with a PhD in Electrical Engineering
+                from the University of Twente. My research focuses on Joint Communication
+                and Sensing (JCAS), phased arrays, beamforming, radar systems,
+                ultrasonic imaging, and optimization algorithms for next-generation sensing
+                and communication platforms.
+            </p>
+
+            <a class="button" href="cv.pdf" target="_blank">
+                Download CV
+            </a>
+
+        </section>
+
+        <section class="section" id="research">
+
+            <h2>Research Interests</h2>
+
+            <ul>
+                <li>Joint Communication and Sensing (JCAS)</li>
+                <li>Phased Array Systems</li>
+                <li>Ultrasonic Imaging & NDT</li>
+                <li>Beamforming & Array Optimization</li>
+                <li>Radar Signal Processing</li>
+                <li>Wireless Communication Systems</li>
+                <li>Microwave & RF Engineering</li>
+            </ul>
+
+        </section>
+
+        <section class="section" id="projects">
+
+            <h2>Selected Projects</h2>
+
+            <div class="project">
+                <h3>MATLAB Calibration Platform</h3>
+
+                <p>
+                    Developed a MATLAB-based calibration and optimization platform
+                    for ultrasonic inspection systems, including visualization tools,
+                    Pareto optimization, and time-of-arrival analysis.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>JCAS Tiled Array Optimization</h3>
+
+                <p>
+                    Designed scenario-aware tiled antenna apertures for multi-user
+                    communication and multi-target sensing using optimization-driven
+                    channel matching techniques.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Ultrasonic Imaging Algorithms</h3>
+
+                <p>
+                    Investigated TFM, PCI, and TR-MUSIC imaging techniques
+                    for advanced ultrasonic non-destructive testing applications.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="section" id="publications">
+
+            <h2>Publications</h2>
+
+            <ul>
+
+                <li>
+                    <strong>
+                        Tiled Array Design for Multi-beam Joint Communication and Sensing:
+                        Channel Matching Method
+                    </strong>
+                    <br>
+                    IEEE Open Journal of the Communications Society, 2025
+                </li>
+
+                <li>
+                    <strong>
+                        Tiled Array Design for Joint Communication and Human Sensing
+                    </strong>
+                    <br>
+                    IEEE AP-S/URSI 2026
+                </li>
+
+                <li>
+                    <strong>
+                        Joint Communication and Sensing Using Tiled Arrays
+                    </strong>
+                    <br>
+                    PhD Thesis, University of Twente, 2026
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section class="section" id="skills">
+
+            <h2>Technical Skills</h2>
+
+            <div class="skills">
+
+                <div class="skill">MATLAB</div>
+                <div class="skill">Python</div>
+                <div class="skill">HFSS</div>
+                <div class="skill">CST Studio</div>
+                <div class="skill">Keysight ADS</div>
+                <div class="skill">Vivado</div>
+                <div class="skill">RF Systems</div>
+                <div class="skill">Radar Systems</div>
+                <div class="skill">Beamforming</div>
+                <div class="skill">Signal Processing</div>
+                <div class="skill">Ultrasonics</div>
+                <div class="skill">Optimization</div>
+
+            </div>
+
+        </section>
+
+        <section class="section" id="contact">
+
+            <h2>Contact</h2>
+
+            <p>
+                Email:
+                <a href="mailto:hadi72alidoost@gmail.com">
+                    hadi72alidoost@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Website:
+                <a href="https://alidoust.com">
+                    alidoust.com
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/HadiAlidoustaghdam" target="_blank">
+                    github.com/HadiAlidoustaghdam
+                </a>
+            </p>
+
+        </section>
+
     </div>
-<div class="section">
-    <h2>Publications</h2>
 
-    <ul>
-        <li>
-            Tiled Array Design for Multi-beam Joint Communication and Sensing:
-            Channel Matching Method,
-            IEEE Open Journal of the Communications Society, 2025
-        </li>
-
-        <li>
-            Tiled Array Design for Joint Communication and Human Sensing,
-            IEEE AP-S/URSI 2026
-        </li>
-
-        <li>
-            Joint Communication and Sensing Using Tiled Arrays,
-            PhD Thesis, University of Twente, 2026
-        </li>
-    </ul>
-</div>
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Email: hadi72alidoost@gmail.com</p>
-    </div>
+    <footer>
+        © 2026 Hadi Alidoustaghdam — RF & Wireless Systems Engineer
+    </footer>
 
 </body>
+
 </html>
