@@ -7,21 +7,226 @@
 
     <title>Hadi Alidoustaghdam</title>
 
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-:root{
-    --bg:#0f172a;
-    --card:#1e293b;
-    --primary:#38bdf8;
-    --text:#e2e8f0;
-}
+
+    :root{
+        --bg:#0f172a;
+        --card:#1e293b;
+        --primary:#38bdf8;
+        --text:#e2e8f0;
+    }
+
     *{
-        outline:none;
         margin:0;
         padding:0;
         box-sizing:border-box;
+        outline:none;
+    }
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background:var(--bg);
+        color:var(--text);
+        line-height:1.7;
+    }
+
+    .container{
+        width:90%;
+        max-width:1100px;
+        margin:auto;
+    }
+
+    nav{
+        position:sticky;
+        top:0;
+        z-index:100;
+        backdrop-filter:blur(10px);
+        background:rgba(15,23,42,0.9);
+        border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    nav ul{
+        display:flex;
+        justify-content:center;
+        list-style:none;
+        padding:18px;
+        gap:35px;
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        color:var(--text);
+        text-decoration:none;
+        font-size:15px;
+        transition:0.3s;
+    }
+
+    nav a:hover{
+        color:var(--primary);
+    }
+
+    header{
+        text-align:center;
+        padding:90px 0 70px 0;
+        border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .profile-photo{
+        width:180px;
+        height:180px;
+        border-radius:50%;
+        object-fit:cover;
+        margin-bottom:25px;
+        border:4px solid var(--primary);
+        box-shadow:0 0 30px rgba(56,189,248,0.25);
+    }
+
+    header h1{
+        font-size:58px;
+        color:#60a5fa;
+        margin-bottom:15px;
+        letter-spacing:1px;
+    }
+
+    header p{
+        font-size:20px;
+        color:#cbd5e1;
+        max-width:900px;
+        margin:auto;
+    }
+
+    .section{
+        margin-top:40px;
+        background:var(--card);
+        padding:35px;
+        border-radius:18px;
+
+        box-shadow:
+        0 0 20px rgba(59,130,246,0.08),
+        0 0 25px rgba(0,0,0,0.25);
+    }
+
+    h2{
+        color:#93c5fd;
+        margin-bottom:22px;
+        font-size:32px;
+    }
+
+    h3{
+        color:#dbeafe;
+        margin-bottom:12px;
+        font-size:24px;
+    }
+
+    p{
+        color:#cbd5e1;
+        font-size:17px;
+        margin-bottom:14px;
+    }
+
+    ul{
+        padding-left:24px;
+    }
+
+    li{
+        margin-bottom:14px;
+        color:var(--text);
+    }
+
+    a{
+        color:var(--primary);
+        text-decoration:none;
+        transition:0.3s;
+    }
+
+    a:hover{
+        color:#7dd3fc;
+    }
+
+    .button{
+        display:inline-block;
+        margin-top:15px;
+        padding:12px 24px;
+        background:#2563eb;
+        border-radius:10px;
+        color:white;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    .button:hover{
+        background:#3b82f6;
+        transform:translateY(-2px);
+    }
+
+    .skills{
+        display:flex;
+        flex-wrap:wrap;
+        gap:12px;
+        margin-top:15px;
+    }
+
+    .skill{
+        background:var(--bg);
+        padding:10px 16px;
+        border-radius:30px;
+        border:1px solid rgba(255,255,255,0.08);
+        color:#cbd5e1;
+        font-size:14px;
+    }
+
+    .project{
+        margin-top:45px;
+        padding-bottom:25px;
+        border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .project:last-child{
+        border-bottom:none;
+    }
+
+    .image-grid{
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap:20px;
+        margin-top:25px;
+        justify-items:center;
+    }
+
+    .image-card{
+        background:var(--bg);
+        padding:12px;
+        border-radius:16px;
+        width:100%;
+        max-width:320px;
+    }
+
+    .project-image{
+        width:100%;
+        max-height:260px;
+        object-fit:contain;
+        border-radius:12px;
+        background:white;
+        padding:8px;
+        transition:0.3s;
+    }
+
+    .project-image:hover{
+        transform:scale(1.03);
+    }
+
+    .image-caption{
+        font-size:14px;
+        margin-top:10px;
+        color:#94a3b8;
     }
 
     #contact p{
@@ -32,19 +237,19 @@
     }
 
     #contact p i{
-        color:#38bdf8;
+        color:var(--primary);
         font-size:22px;
     }
 
     .social-icons{
         display:flex;
-        gap:28px;
+        gap:30px;
         margin-top:30px;
     }
 
     .social-icons a{
         color:var(--primary);
-        font-size:34px;
+        font-size:36px;
         transition:0.3s;
     }
 
@@ -53,249 +258,35 @@
         transform:translateY(-4px) scale(1.12);
     }
 
+    footer{
+        text-align:center;
+        padding:50px 0;
+        color:#94a3b8;
+        font-size:14px;
+    }
 
-    
-*{
-    outline:none;
-}
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+    @media(max-width:768px){
 
-        html{
-            scroll-behavior:smooth;
-        }
-
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background:#0f172a;
-            color:#e2e8f0;
-            line-height:1.7;
-        }
-
-        .container{
-            width:90%;
-            max-width:1100px;
-            margin:auto;
-        }
-
-        nav{
-            position:sticky;
-            top:0;
-            z-index:100;
-            backdrop-filter: blur(10px);
-            background:rgba(15,23,42,0.9);
-            border-bottom:1px solid rgba(255,255,255,0.06);
-        }
-
-        nav ul{
-            display:flex;
-            justify-content:center;
-            list-style:none;
-            padding:18px;
-            gap:35px;
-            flex-wrap:wrap;
-        }
-
-        nav a{
-            color:#e2e8f0;
-            text-decoration:none;
-            font-size:15px;
-            transition:0.3s;
-        }
-
-        nav a:hover{
-            color:#38bdf8;
-        }
-
-        header{
-            text-align:center;
-            padding:90px 0 70px 0;
-            border-bottom:1px solid rgba(255,255,255,0.08);
-        }
-
-        .profile-photo{
-            width:180px;
-            height:180px;
-            border-radius:50%;
-            object-fit:cover;
-            margin-bottom:25px;
-            border:4px solid #38bdf8;
-            box-shadow:0 0 30px rgba(56,189,248,0.25);
+        .image-grid{
+            grid-template-columns:1fr;
         }
 
         header h1{
-            font-size:58px;
-            color:#60a5fa;
-            margin-bottom:15px;
-            letter-spacing:1px;
+            font-size:40px;
         }
 
         header p{
-            font-size:20px;
-            color:#cbd5e1;
-            max-width:900px;
-            margin:auto;
+            font-size:18px;
         }
 
         .section{
-            margin-top:40px;
-            background:#1e293b;
-            padding:35px;
-            border-radius:18px;
-
-            box-shadow:
-            0 0 20px rgba(59,130,246,0.08),
-            0 0 25px rgba(0,0,0,0.25);
+            padding:25px;
         }
 
-        h2{
-            color:#93c5fd;
-            margin-bottom:22px;
-            font-size:32px;
+        nav ul{
+            gap:15px;
         }
-
-        h3{
-            color:#dbeafe;
-            margin-bottom:12px;
-            font-size:24px;
-        }
-
-        p{
-            color:#cbd5e1;
-            font-size:17px;
-            margin-bottom:14px;
-        }
-
-        ul{
-            padding-left:24px;
-        }
-
-        li{
-            margin-bottom:14px;
-            color:#e2e8f0;
-        }
-
-        a{
-            color:#38bdf8;
-            text-decoration:none;
-            transition:0.3s;
-        }
-
-        a:hover{
-            color:#7dd3fc;
-        }
-
-        .button{
-            display:inline-block;
-            margin-top:15px;
-            padding:12px 24px;
-            background:#2563eb;
-            border-radius:10px;
-            color:white;
-            font-weight:bold;
-            transition:0.3s;
-        }
-
-        .button:hover{
-            background:#3b82f6;
-            transform:translateY(-2px);
-        }
-
-        .skills{
-            display:flex;
-            flex-wrap:wrap;
-            gap:12px;
-            margin-top:15px;
-        }
-
-        .skill{
-            background:var(--bg);
-            padding:10px 16px;
-            border-radius:30px;
-            border:1px solid rgba(255,255,255,0.08);
-            color:#cbd5e1;
-            font-size:14px;
-        }
-
-        .project{
-            margin-top:45px;
-            padding-bottom:25px;
-            border-bottom:1px solid rgba(255,255,255,0.08);
-        }
-
-        .project:last-child{
-            border-bottom:none;
-        }
-
-.image-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:20px;
-    margin-top:25px;
-    justify-items:center;
-}
-
-.image-card{
-    background:#0f172a;
-    padding:12px;
-    border-radius:16px;
-    width:100%;
-    max-width:320px;
-}
-
-.project-image{
-    width:100%;
-    max-height:260px;
-    object-fit:contain;
-    border-radius:12px;
-    background:white;
-    padding:8px;
-}
-
-.project-image:hover{
-    transform:scale(1.03);
-}
-
-        .image-caption{
-            font-size:14px;
-            margin-top:10px;
-            color:#94a3b8;
-        }
-
-        footer{
-            text-align:center;
-            padding:50px 0;
-            color:#94a3b8;
-            font-size:14px;
-        }
-@media(max-width:768px){
-
-    .image-grid{
-        grid-template-columns:1fr;
     }
-
-}
-        @media(max-width:768px){
-
-            header h1{
-                font-size:40px;
-            }
-
-            header p{
-                font-size:18px;
-            }
-
-            .section{
-                padding:25px;
-            }
-
-            nav ul{
-                gap:15px;
-            }
-        }
 
     </style>
 
@@ -318,7 +309,6 @@
 
         <div class="container">
 
-            <!-- Upload your image as profile.jpg -->
             <img src="Hadi_image.jpeg"
             alt="Hadi Alidoustaghdam"
             class="profile-photo">
@@ -374,203 +364,35 @@
 
         </section>
 
-        <!-- PROJECTS -->
-        <section class="section" id="projects">
+        <!-- CONTACT -->
+        <section class="section" id="contact">
 
-            <h2>Selected Projects</h2>
+            <h2>Contact</h2>
 
-            <!-- Microwave Imaging -->
-            <div class="project">
+            <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:hadi.alidoustaghdam@gmail.com">
+                    hadi.alidoustaghdam@gmail.com
+                </a>
+            </p>
 
-                <h3>
-                    Microwave Imaging and Electromagnetic Simulation
-                </h3>
+            <div class="social-icons">
 
-                <p>
-                    Developed microwave imaging systems for industrial monitoring
-                    and biomedical applications using inverse scattering methods,
-                    HFSS electromagnetic simulations, phased antenna arrays,
-                    and qualitative reconstruction algorithms.
-                </p>
-
-                <p>
-                    The project included microwave pipeline monitoring,
-                    breast tumor imaging, cavity-based sensing systems,
-                    and multifrequency electromagnetic imaging techniques.
-                </p>
-
-                <a class="button" href="MasterThesis.pdf" target="_blank">
-                    View Master Thesis
+                <a href="https://github.com/HadiAlidoustaghdam" target="_blank">
+                    <i class="fab fa-github"></i>
                 </a>
 
-                <div class="image-grid">
+                <a href="https://www.linkedin.com/in/hadi-alidoustaghdam/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
 
-                    <div class="image-card">
-                        <img src="Pipe_HFSS.png"
-                        alt="HFSS Simulation"
-                        class="project-image">
-
-                        <p class="image-caption">
-                            Anysy HFSS simulation of cavity-based microwave imaging system
-                        </p>
-                    </div>
-
-                    <div class="image-card">
-                        <img src="Pipe_MW.png"
-                        alt="Pipeline Imaging"
-                        class="project-image">
-
-                        <p class="image-caption">
-                             Pipeline monitoring  with microwaves
-                        </p>
-                    </div>
-
-
-
-                    <div class="image-card">
-                        <img src="Breast_HFSS.png"
-                        alt="Breast HFSS"
-                        class="project-image">
-
-                        <p class="image-caption">
-                           Anysy HFSS simulation of cavity-based breast imaging
-                        </p>
-                    </div>
-                    <div class="image-card">
-                        <img src="Breast_MW.png"
-                        alt="Breast Imaging"
-                        class="project-image">
-
-                        <p class="image-caption">
-                            Breast tumor detection with microwaves
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- MATLAB -->
-            <div class="project">
-
-                <h3>MATLAB Calibration Platform</h3>
-
-                <p>
-                    Developed a MATLAB-based calibration and optimization platform
-                    for ultrasonic inspection systems, including visualization tools,
-                    Pareto optimization, and time-of-arrival analysis.
-                </p>
-
-            </div>
-
-            <!-- JCAS -->
-            <div class="project">
-
-                <h3>JCAS Tiled Array Optimization</h3>
-
-                <p>
-                    Designed scenario-aware tiled antenna apertures for multi-user
-                    communication and multi-target sensing using optimization-driven
-                    channel matching techniques.
-                </p>
-
-                <img src="HBF_Scene.png"
-                alt="JCAS Tiled Array"
-                class="project-image"
-                style="margin-top:25px;">
-
-            </div>
-
-            <!-- Ultrasonics -->
-            <div class="project">
-
-                <h3>Ultrasonic Imaging Algorithms</h3>
-
-                <p>
-                    Investigated TFM, PCI, and TR-MUSIC imaging techniques
-                    for advanced ultrasonic non-destructive testing applications.
-                </p>
+                <a href="https://scholar.google.com/citations?user=oIqg4oYAAAAJ&hl=en" target="_blank">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
 
             </div>
 
         </section>
-
-        <!-- PUBLICATIONS -->
-        <section class="section" id="publications">
-
-            <h2>Publications</h2>
-
-            <ul>
-
-                <li>
-                    <strong>
-                        Tiled Array Design for Multi-beam Joint Communication and Sensing:
-                        Channel Matching Method
-                    </strong>
-                    <br>
-                    IEEE Open Journal of the Communications Society, 2025
-                </li>
-
-                <li>
-                    <strong>
-                        Tiled Array Design for Joint Communication and Human Sensing
-                    </strong>
-                    <br>
-                    IEEE AP-S/URSI 2026
-                </li>
-
-                <li>
-                    <strong>
-                        Joint Communication and Sensing Using Tiled Arrays
-                    </strong>
-                    <br>
-                    PhD Thesis, University of Twente, 2026
-                </li>
-
-            </ul>
-
-        </section>
-
-        <!-- SKILLS -->
-        <section class="section" id="skills">
-
-            <h2>Technical Skills</h2>
-
-            <div class="skills">
-
-                <div class="skill">MATLAB</div>
-                <div class="skill">Python</div>
-                <div class="skill">HFSS</div>
-                <div class="skill">CST Studio</div>
-                <div class="skill">Keysight ADS</div>
-                <div class="skill">Vivado</div>
-                <div class="skill">RF Systems</div>
-                <div class="skill">Radar Systems</div>
-                <div class="skill">Beamforming</div>
-                <div class="skill">Signal Processing</div>
-                <div class="skill">Ultrasonics</div>
-                <div class="skill">Optimization</div>
-
-            </div>
-<div class="social-icons">
-    <a href="https://github.com/HadiAlidoustaghdam" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
-    <a href="https://github.com/HadiAlidoustaghdam" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/in/hadi-alidoustaghdam/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-
-    <a href="https://scholar.google.com/citations?user=oIqg4oYAAAAJ&hl=en" target="_blank">
-        <i class="fas fa-graduation-cap"></i>
-    </a>
-</div>
-        </section>
-</div>
-
-
 
     </div>
 
