@@ -78,13 +78,17 @@
 
 header{
     position:relative;
+
+    min-height:85vh;
+
+    display:flex;
+    align-items:center;
+
     overflow:hidden;
-    padding:90px 0 70px 0;
-    border-bottom:1px solid rgba(255,255,255,0.08);
 
     background-image:
     linear-gradient(
-    rgba(15,23,42,0.45),
+    rgba(15,23,42,0.35),
     rgba(15,23,42,0.55)
     ),
     url("Back_Cover_Thesis.png");
@@ -119,13 +123,16 @@ header{
         margin:auto;
     }
 .hero{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:60px;
-    flex-wrap:wrap;
-    position:relative;
-    z-index:2;
+    width:100%;
+}
+        .hero-text{
+    background:rgba(15,23,42,0.45);
+
+    padding:30px;
+
+    border-radius:22px;
+
+    backdrop-filter:blur(10px);
 }
 .section{
     margin-top:50px;
@@ -281,9 +288,7 @@ header{
         color:var(--primary);
         font-size:22px;
     }
-.hero-text{
-    max-width:650px;
-}
+
     .social-icons{
         display:flex;
         gap:30px;
@@ -411,7 +416,7 @@ header{
             <h2>Research Interests</h2>
 
             <ul>
-                <li>Joint Communication and Sensing (JCAS)</li>
+                <li>Telecommunication</li>
                 <li>Ultrasonic Imaging & NDT</li>
                 <li>Array Optimization</li>
                 <li>Radar Signal Processing</li>
