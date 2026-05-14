@@ -68,8 +68,9 @@ rgba(15,23,42,0.72)
         top:0;
         z-index:100;
         backdrop-filter:blur(10px);
-        background:rgba(15,23,42,0.9);
+        background:rgba(15,23,42,0.72);
         border-bottom:1px solid rgba(255,255,255,0.06);
+        backdrop-filter:blur(18px);
     }
 
     nav ul{
@@ -110,8 +111,14 @@ header{
         margin-bottom:25px;
         border:4px solid var(--primary);
         box-shadow:0 0 30px rgba(56,189,248,0.25);
+        transition:0.4s;
     }
+.profile-photo:hover{
+    transform:scale(1.05);
 
+    box-shadow:
+    0 0 60px rgba(56,189,248,0.45);
+}
     header h1{
         font-size:58px;
         color:#60a5fa;
@@ -188,7 +195,7 @@ header{
     }
 
     p{
-        color:#cbd5e1;
+       color:#f8fafc;
         font-size:17px;
         margin-bottom:14px;
     }
@@ -199,7 +206,7 @@ header{
 
     li{
         margin-bottom:14px;
-        color:var(--text);
+        color:#f8fafc;
     }
 
     a{
