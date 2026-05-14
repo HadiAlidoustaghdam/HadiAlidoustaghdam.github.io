@@ -125,16 +125,33 @@ header{
     position:relative;
     z-index:2;
 }
-    .section{
-        margin-top:40px;
-        background:var(--card);
-        padding:35px;
-        border-radius:18px;
+.section{
+    margin-top:50px;
 
-        box-shadow:
-        0 0 20px rgba(59,130,246,0.08),
-        0 0 25px rgba(0,0,0,0.25);
-    }
+    background:rgba(30,41,59,0.92);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    padding:40px;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.35),
+    0 0 25px rgba(56,189,248,0.08);
+
+    backdrop-filter:blur(10px);
+
+    transition:0.3s;
+}
+
+.section:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.4),
+    0 0 35px rgba(56,189,248,0.12);
+}
 
     h2{
         color:#93c5fd;
@@ -228,7 +245,7 @@ header{
         padding:12px;
         border-radius:16px;
         width:100%;
-        max-width:320px;
+        max-width:4600px;
     }
 
     .project-image{
@@ -467,15 +484,14 @@ header{
     <h2>Selected Projects</h2> 
     <!-- JCAS -->
     <div class="project"> 
-        <h3> PhD Theis: Joint communication and sensing using tiled arrays for human centeric applications</h3>
+        <h3> PhD Thesis: Joint communication and sensing using tiled arrays for human centeric applications</h3>
         <p> Designed scenario-aware tiled antenna apertures for multi-user communication and multi-target sensing using optimization-driven channel matching techniques. 
         </p> 
         <img src="HBF_Scene.png" 
             alt="JCAS Tiled Array" 
             class="project-image" 
             style="margin-top:25px;">
-        <p> DDeployed mmWave radar for human posture, breathing rate and heart rate estimation.
-        </p> 
+        <p> Deployed mmWave radar for human posture, breathing rate and heart rate estimation.
         <img src="Health_Monitoring.png" 
             alt="Health_Monitoring" 
             class="project-image" 
