@@ -34,12 +34,28 @@
         scroll-behavior:smooth;
     }
 
-    body{
-       font-family:'Inter', sans-serif;
-        background:var(--bg);
-        color:var(--text);
-        line-height:1.7;
-    }
+body{
+    font-family:'Inter', sans-serif;
+
+    color:var(--text);
+
+    line-height:1.7;
+
+    background-image:
+    linear-gradient(
+    rgba(15,23,42,0.88),
+    rgba(15,23,42,0.92)
+    ),
+    url("Back_Cover_Thesis.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    background-repeat:no-repeat;
+}
 
     .container{
         width:90%;
@@ -85,19 +101,6 @@ header{
     align-items:center;
 
     overflow:hidden;
-
-    background-image:
-    linear-gradient(
-    rgba(15,23,42,0.35),
-    rgba(15,23,42,0.55)
-    ),
-    url("Back_Cover_Thesis.png");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
 }
     .profile-photo{
         width:180px;
