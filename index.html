@@ -78,12 +78,15 @@
 
 header{
     position:relative;
+    overflow:hidden;
     padding:90px 0 70px 0;
     border-bottom:1px solid rgba(255,255,255,0.08);
 
     background-image:
-    linear-gradient(rgba(15,23,42,0.85),
-    rgba(15,23,42,0.9)),
+    linear-gradient(
+    rgba(15,23,42,0.82),
+    rgba(15,23,42,0.88)
+    ),
     url("Back_Cover_Thesis.png");
 
     background-size:cover;
@@ -113,7 +116,10 @@ header{
         max-width:900px;
         margin:auto;
     }
-
+.hero{
+    position:relative;
+    z-index:2;
+}
     .section{
         margin-top:40px;
         background:var(--card);
