@@ -300,7 +300,37 @@ header{
     cursor:grabbing;
 }
 
+.job-title{
 
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#dbeafe;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    flex-wrap:wrap;
+}
+
+.inline-logo{
+
+    width:34px;
+
+    height:34px;
+
+    object-fit:contain;
+
+    background:white;
+
+    padding:4px;
+
+    border-radius:8px;
+}
 .project-image{
 
     max-width:100%;
@@ -319,14 +349,6 @@ header{
     will-change:transform;
 }
 
-.project-image:hover{
-
-    transform:scale(2);
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,0.45),
-    0 0 25px rgba(56,189,248,0.15);
-}
 
 .image-caption{
     font-size:14px;
@@ -533,13 +555,13 @@ Signal Processing
 </div>
    <div class="project">
 
-    <div class="experience-header">
+    <h3 class="job-title">
 
         <img src="UTWENTE_Logo.png"
         alt="University of Twente Logo"
         class="company-logo">
 
-        <div>
+    </h3>
 
             <h3>PhD Researcher – Communication & Sensing</h3>
 
